@@ -1,0 +1,9 @@
+lenaRgb = imread('lena.png');
+lenaGray = rgb2gray(lenaRgb);
+doubleLena=double(lenaGray);
+standartDeviation=sqrt(var(doubleLena,0,'all'));
+meanOfThePic= mean(doubleLena,'all');
+[maxNum,maxIndex]=max(doubleLena(:));
+[maxIndexX,maxIndexY]=ind2sub(size(doubleLena),maxIndex);
+[minNum,minIndex]=min(doubleLena(:));
+[minIndexX,minIndexY]=ind2sub(size(doubleLena),minIndex);
